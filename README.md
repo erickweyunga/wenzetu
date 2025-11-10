@@ -1,4 +1,4 @@
-# Wenzetu
+# WENZETU
 
 **Wenzetu** is a highly configurable helper crate for [Uncovr](https://github.com/erickweyunga/uncovr) projects that simplifies common web application setup tasks.
 
@@ -109,14 +109,14 @@ Override any setting programmatically:
 ```rust
 App::new()
     .auto_config()  // Load from environment first
-    
+
     // Then override what you need
     .environment(uncovr::config::Environment::Production)
     .templates_path("custom/templates/**/*")
     .docs_path("/api-docs")
     .openapi_json_path("/api-spec.json")
     .static_files("/assets", "./static")
-    
+
     .web(web_routes)
     .api("/api", api_routes)
     .serve()
@@ -134,26 +134,26 @@ App::new()
     .auto_config()                          // Load from .env
     .with_config(custom_config)             // Use custom config
     .environment(Environment::Production)   // Set environment
-    
+
     // Templates
     .templates_path("views/**/*")           // Custom template path
-    
+
     // Static Files
     .static_files("/assets", "./public")    // Custom static files
     .no_static_files()                      // Disable static files
-    
+
     // API Documentation
     .docs_path("/documentation")            // Custom Swagger UI path
     .openapi_json_path("/spec.json")        // Custom OpenAPI JSON path
-    
+
     // Routes
     .web(web_routes)                        // Add web routes
     .api("/api", api_routes)                // Add API with docs
     .api_no_docs("/api", api_routes)        // Add API without docs
-    
+
     // Development
     .live_reload(true)                      // Enable/disable live reload
-    
+
     .serve()                                // Build and serve
     .await
     .unwrap();
@@ -560,10 +560,10 @@ pub struct AppState;
 async fn main() {
     // Load config
     let config = load_config();
-    
+
     // Create route configs
     let (web_config, api_config) = helpers::fullstack_configs(&config);
-    
+
     // Create routes
     let web_routes = app::routes::create_routes(AppState, web_config).await;
     let api_routes = api::routes::create_api_routes(AppState, api_config).await;
@@ -610,4 +610,4 @@ at your option.
 
 ## Author
 
-Erick Weyunga - [GitHub](https://github.com/erickweyunga)
+Eric Kweyunga - [GitHub](https://github.com/erickweyunga)
