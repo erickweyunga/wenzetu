@@ -1,0 +1,43 @@
+[package]
+name = "wenzetu"
+version = "0.0.1"
+edition = "2024"
+authors = ["Erick Weyunga <erickweyunga@example.com>"]
+license = "MIT OR Apache-2.0"
+description = "A highly configurable helper crate for uncovr projects - simplifies templates, static files, and configuration"
+readme = "README.md"
+homepage = "https://github.com/erickweyunga/wenzetu"
+repository = "https://github.com/erickweyunga/wenzetu"
+documentation = "https://docs.rs/wenzetu"
+keywords = ["web", "framework", "templates", "uncovr", "configuration"]
+categories = ["web-programming", "template-engine", "config", "development-tools"]
+exclude = [
+    ".env",
+    ".env.*",
+    "target/",
+    "examples/",
+    "tests/",
+    ".git/",
+    ".gitignore",
+]
+
+[dependencies]
+uncovr = "0.2.5"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+config = "0.15.18"
+dotenvy = "0.15"
+tower-http = { version = "0.6.6", features = ["fs"] }
+tera = "1.20.1"
+tera-hot-reload = { version = "0.2.5", optional = true }
+tower-livereload = { version = "0.9.6", optional = true }
+serde_json = "1.0"
+html-escape = "0.2.13"
+
+[features]
+default = ["live-reload"]
+live-reload = ["dep:tera-hot-reload", "dep:tower-livereload"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

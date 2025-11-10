@@ -1,0 +1,42 @@
+# Rust
+/target
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Documentation (except README.md)
+*.md
+!README.md
+!LICENSE-MIT
+!LICENSE-APACHE
+
+# Build artifacts
+*.o
+*.so
+*.dylib
+*.dll
+*.a
+
+# Test artifacts
+*.profraw
+*.profdata
+
+# Temporary files
+tmp/
+temp/
+
+# OS
+Thumbs.db
