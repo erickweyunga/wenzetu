@@ -20,6 +20,7 @@ Cargo.lock
 # Documentation (except README.md)
 *.md
 !README.md
+!CHANGELOG.md
 !LICENSE-MIT
 !LICENSE-APACHE
 

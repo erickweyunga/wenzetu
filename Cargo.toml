@@ -1,10 +1,10 @@
 [package]
 name = "wenzetu"
-version = "0.0.1"
-edition = "2024"
+version = "0.1.0"
+edition = "2021"
 authors = ["Erick Weyunga <erickweyunga@example.com>"]
 license = "MIT OR Apache-2.0"
-description = "A highly configurable helper crate for uncovr projects - simplifies templates, static files, and configuration"
+description = "A helper crate for uncovr projects - simplifies templates, static files, and configuration"
 readme = "README.md"
 homepage = "https://github.com/erickweyunga/wenzetu"
 repository = "https://github.com/erickweyunga/wenzetu"
@@ -22,7 +22,7 @@ exclude = [
 ]
 
 [dependencies]
-uncovr = "0.2.5"
+uncovr = "0.2.6"
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1", features = ["derive"] }
 config = "0.15.18"
